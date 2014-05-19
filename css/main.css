@@ -1,0 +1,31 @@
+
+div.countdownTimer {
+    margin-top: 10px;
+    float:left;
+    width:190px;
+    height:54px;
+    background-image:url('../img/CCBackground_Red_190.png');
+    background-repeat: no-repeat;
+}
+
+/* 14 x 210 */
+div#days {
+    margin-left: 23px;
+}
+
+div#days, div#hours, div#mins, div#secs {
+    
+    margin-right: 10px;
+    margin-top: 13px;
+    width:28px;
+    height:21px;
+    float:left;
+}
+
+div.tens, div.ones {
+    float:left;
+    background-image:url('../img/numbers_white_small.png');
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 21px;
+}
