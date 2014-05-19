@@ -1,6 +1,6 @@
 ﻿/**
  * Zachys CountDown Module
- * Description: Used to start the countdown timer for internet live auctions
+ * Description: Countdown timer with a GUI
  * Author: Eubert Go
  * Date: 01/09/2014
 */
@@ -20,8 +20,6 @@ var countdown = (function ($) {
         Sec1: 0
     };
 
-    var auctionId;       // bid close date and time from the database
-    var ajax;
     var interval;
 
     /* remaining time */
@@ -32,7 +30,7 @@ var countdown = (function ($) {
     var SECS_LEFT;
 
     // constructor
-    function zachCountDown(id, timeRemaining) {
+    function countdown(id, timeRemaining) {
 
         elementId = id;
         timerEl = $(id);
@@ -64,17 +62,11 @@ var countdown = (function ($) {
         startTimer();
     };
 
-    /** 
-      *     @desc callback function for GetServerTime that returns a datetime value in
-      *               in array format, then updates the image of the countdown timer.
-      *     @param {data} datetime data from the server in an array
-   */
+    // Calculates the total number of seconds time remaining and starts the countdown
     function startTimer() {
 
         SECS_LEFT = (DAYS * 86400) + (HRS * 3600) + (MINS * 60) + SECS;
-
         interval = setInterval(decrement, 1000);
-     
     }
 
     function decrement() {
